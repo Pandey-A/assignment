@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for media resizer */
+.media-resizer {
+  @apply absolute z-50 border-2 border-blue-500 shadow-lg;
+}
+
+.media-resizer-handle {
+  @apply absolute w-4 h-4 bg-white border-2 border-blue-500 rounded-full;
+}
+
+.media-resizer-handle-top {
+  @apply top-[-8px] left-1/2 -translate-x-1/2 cursor-ns-resize;
+}
+
+.media-resizer-handle-right {
+  @apply right-[-8px] top-1/2 -translate-y-1/2 cursor-ew-resize;
+}
+
+.media-resizer-handle-bottom {
+  @apply bottom-[-8px] left-1/2 -translate-x-1/2 cursor-ns-resize;
+}
+
+.media-resizer-handle-left {
+  @apply left-[-8px] top-1/2 -translate-y-1/2 cursor-ew-resize;
+}
+
+.media-resizer-handle-top-left {
+  @apply top-[-8px] left-[-8px] cursor-nwse-resize;
+}
+
+.media-resizer-handle-top-right {
+  @apply top-[-8px] right-[-8px] cursor-nesw-resize;
+}
+
+.media-resizer-handle-bottom-left {
+  @apply bottom-[-8px] left-[-8px] cursor-nesw-resize;
+}
+
+.media-resizer-handle-bottom-right {
+  @apply bottom-[-8px] right-[-8px] cursor-nwse-resize;
+}
