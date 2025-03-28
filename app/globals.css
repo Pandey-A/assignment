@@ -65,3 +65,8 @@
 .media-resizer-handle-bottom-right {
   @apply bottom-[-8px] right-[-8px] cursor-nwse-resize;
 }
+
+.play-icon {
+  opacity: 1 !important;
+  visibility: visible !important;
+}

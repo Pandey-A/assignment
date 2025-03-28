@@ -270,15 +270,16 @@ export default function Home() {
             </div>
 
             <Group>
-              <Button
-                onClick={togglePlayback}
-                leftSection={isPlaying ? <Pause size={20} /> : <Play size={20} />}
-                variant="filled"
-                color="blue"
-                fullWidth
-              >
-                {isPlaying ? 'Pause' : 'Play'}
-              </Button>
+            <Button
+  onClick={togglePlayback}
+  leftSection={<span className="play-icon">{isPlaying ? <Pause size={20} /> : <Play size={20} />}</span>}
+  variant="filled"
+  color="blue"
+  fullWidth
+>
+  {isPlaying ? 'Pause' : 'Play'}
+</Button>
+
               <ActionIcon
                 variant="light"
                 color="gray"
